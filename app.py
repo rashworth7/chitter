@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 # == Your Routes Here ==
 
+@app.route('/')
+def get_chitter():
+
+    return render_template('/chitter/index.html')
 
 # == Example Code Below ==
 
@@ -23,8 +27,7 @@ def get_emoji():
 
 # This imports some more example routes for you to see how they work
 # You can delete these lines if you don't need them.
-from example_routes import apply_example_routes
-apply_example_routes(app)
+
 
 # == End Example Code ==
 

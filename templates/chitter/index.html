@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chitter</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Welcome to Chitter</h1>
+    <label for="login">Username</label>
+    <input 
+    <h1>Cheets</h1>
+
+
+    {% for peep in peeps%}
+    <div>
+        <p>
+            <a href="/users/{{user.id}}">{{user.username}}</a>
+        </p>
+        <p class="t-peeps">{{peep.message}}</p>  
+        <p>Tags</p>
+        {% for user in users%}
+        <p class="t-tags">
+            <a heref="/users/{{user.id}}">{{user.username}}</a>
+        </p>
+    
+        {% endfor %}
+    </div>
+    {% endfor %}
+      <!-- Jinja isn't Python, so we need an endfor to close the loop -->
+  
+
+    <!-- This is a link to another page. -->
+    <!-- The browser will send `GET /books/new` when the user clicks this -->
+    
+  </body>
+</html>
